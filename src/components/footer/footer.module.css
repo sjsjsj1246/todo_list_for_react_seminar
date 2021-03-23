@@ -1,0 +1,11 @@
+@value todoWhite, todoBlue from '../../common/colors.css';
+
+.footer {
+  width: 100%;
+  background-color: todoBlue;
+  text-align: center;
+}
+
+.title {
+  color: todoWhite;
+}
