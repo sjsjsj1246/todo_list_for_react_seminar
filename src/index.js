@@ -5,10 +5,10 @@ import App from './app';
 import axios from 'axios';
 import TodoList from './service/todo_list';
 
-const httpClient = axios.create({
-  baseURL: 'http://',
-  params: { key: process.env.TODO_LIST_API_KEY },
-});
+// const httpClient = axios.create({
+//   baseURL: 'http://',
+//   params: { key: process.env.TODO_LIST_API_KEY },
+// });
 //const todolist = new TodoList(httpClient);
 
 ReactDOM.render(
