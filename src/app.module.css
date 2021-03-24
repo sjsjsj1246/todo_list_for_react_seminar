@@ -12,3 +12,35 @@
   align-items: center;
   background-image: url('https://i.postimg.cc/SsMv4vSf/blackwood2.png');
 }
+
+.clock {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+@media screen and (max-width: 1680px) {
+  .clock {
+    position: absolute;
+    left: 8%;
+    top: 12%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .clock {
+    position: absolute;
+    left: 6%;
+    top: 14%;
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  .clock {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    left: auto;
+    top: -3%;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useHistory } from 'react-router';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import TodoItem from '../todo_item/todo_item';
@@ -6,6 +7,7 @@ import styles from './todo_list.module.css';
 
 const TodoList = () => {
   const textRef = useRef();
+  const history = useHistory();
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -41,9 +43,19 @@ const TodoList = () => {
       ),
     );
   };
+
+  const goTodoHome = () => {
+    history.push({
+      pathname: '/',
+    });
+  };
+  const onLogout = () => {
+    goTodoHome();
+  };
+
   return (
     <div className={styles.todoList}>
-      <Header />
+      <Header onLogout={onLogout} />
       <section className={styles.section}>
         <div className={styles.container}>
           {todos.map((todo) => (

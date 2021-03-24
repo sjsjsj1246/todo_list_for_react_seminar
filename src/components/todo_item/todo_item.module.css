@@ -1,11 +1,20 @@
-@value todoBlue, todoBlack from '../../common/colors.css';
+@value todoBlue, todoLightBlue, todoBlack from '../../common/colors.css';
 
 .todoItem {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 1em 1.5em;
-  border-bottom: 1px solid todoBlue;
+  padding: 1em 1.5em;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  cursor: pointer;
+}
+
+.todoItem:hover {
+  background-color: todoLightBlue;
+}
+
+.checked {
+  color: gray;
+  text-decoration: line-through;
 }
 
 .checkBox {
@@ -14,7 +23,6 @@
   font-size: 1.5rem;
   border: 1px solid todoBlack;
   margin-right: 0.5em;
-  margin-bottom: 0.25em;
   color: todoBlack;
   display: flex;
   justify-content: center;
@@ -22,13 +30,18 @@
 }
 
 .text {
+  flex: 1;
   margin: 0;
   width: 100%;
   font-size: 1.2rem;
   text-align: left;
-  padding-bottom: 0.5em;
+}
+
+.todoItem:hover .Remove {
+  opacity: 1;
 }
 
 .Remove {
+  opacity: 0;
   font-size: 1.5rem;
 }
