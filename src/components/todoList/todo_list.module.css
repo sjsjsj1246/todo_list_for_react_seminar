@@ -1,0 +1,41 @@
+@value todoBlue, todoWhite from '../../common/colors.css';
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  background-color: todoWhite;
+}
+
+.container {
+  width: 40rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  margin: 1em;
+  display: flex;
+}
+
+.input {
+  flex: 1;
+  margin-right: 0.5em;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid todoBlue;
+}
+
+.submit {
+  width: 4rem;
+  height: 2.5rem;
+  color: todoWhite;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: todoBlue;
+  border: 0;
+}

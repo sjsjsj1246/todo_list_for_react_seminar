@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './app.module.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/login/login';
-import TodoList from './components/todos/todos';
+import TodoList from './components/todoList/todo_list';
 
 const App = (props) => {
   return (
@@ -12,7 +12,7 @@ const App = (props) => {
           <Route exact path="/">
             <Login />
           </Route>
-          <Route path="/todos">
+          <Route path="/todo_list">
             <TodoList />
           </Route>
         </Switch>

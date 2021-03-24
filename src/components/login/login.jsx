@@ -8,7 +8,7 @@ const Login = (props) => {
   const history = useHistory();
   const goTodoList = () => {
     history.push({
-      pathname: '/todos',
+      pathname: '/todo_list',
     });
   };
   const onLogin = () => {

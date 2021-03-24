@@ -1,9 +1,0 @@
-@value todoWhite from '../../common/colors.css';
-
-.todoList {
-  width: 40rem;
-  height: 40rem;
-  background-color: todoWhite;
-  display: flex;
-  flex-direction: column;
-}
