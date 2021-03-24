@@ -17,6 +17,7 @@
 }
 
 .logout {
+  font-size: 1rem;
   position: absolute;
   top: 2rem;
   right: 0.5rem;
@@ -27,4 +28,12 @@
   border: 0;
   border-radius: 10%;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1045px) {
+  .logout {
+    top: 2rem;
+    right: 1rem;
+    padding: 0.6em;
+  }
 }

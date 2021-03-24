@@ -21,7 +21,6 @@
 
 @media screen and (max-width: 1680px) {
   .clock {
-    position: absolute;
     left: 8%;
     top: 12%;
   }
@@ -29,18 +28,19 @@
 
 @media screen and (max-width: 1400px) {
   .clock {
-    position: absolute;
     left: 6%;
     top: 14%;
   }
 }
 
 @media screen and (max-width: 1045px) {
+  .app {
+    padding-top: 10rem;
+  }
   .clock {
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
+    width: 13rem;
+    height: 13rem;
     left: auto;
-    top: -3%;
+    top: -1.5%;
   }
 }
