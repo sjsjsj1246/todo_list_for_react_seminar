@@ -1,8 +1,8 @@
-@value todoWhite, todoBlue from '../../common/colors.css';
+@value todoWhite, todoGray from '../../common/colors.css';
 
 .footer {
   width: 100%;
-  background-color: todoBlue;
+  background-color: todoGray;
   text-align: center;
 }
 

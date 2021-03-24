@@ -1,11 +1,4 @@
 @value todoBlack: #606B69;
 @value todoWhite: white;
-@value todoLightGrey: #e8e7e6;
-@value todoLightPink: #FCF3F1;
-@value todoLightBlue: #BCD1CE;
-@value todoGray: #626262;
-@value todoBlue: #778583;
-@value todoPink: pink;
-@value todoShadow: rgba(217, 217, 217, 1);
-@value todoColorful: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);
-@value todoWheat: wheat;
+@value todoLightGray: #BCD1CE;
+@value todoGray: #778583;

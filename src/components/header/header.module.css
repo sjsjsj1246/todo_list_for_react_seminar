@@ -1,11 +1,11 @@
-@value todoBlue from '../../common/colors.css';
 @value todoWhite from '../../common/colors.css';
 @value todoBlack from '../../common/colors.css';
+@value todoGray from '../../common/colors.css';
 
 .header {
   width: 100%;
   text-align: center;
-  background-color: todoBlue;
+  background-color: todoGray;
   position: relative;
 }
 

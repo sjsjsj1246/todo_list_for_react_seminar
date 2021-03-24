@@ -1,4 +1,4 @@
-@value todoBlack, todoBlue, todoWhite from '../../common/colors.css';
+@value todoBlack, todoGray, todoWhite from '../../common/colors.css';
 
 .todoList {
   display: flex;
@@ -30,7 +30,7 @@
   font-size: 1rem;
   border: none;
   outline: none;
-  border-bottom: 1px solid todoBlue;
+  border-bottom: 1px solid todoGray;
 }
 
 .submit {
@@ -39,6 +39,6 @@
   color: todoWhite;
   font-size: 1rem;
   font-weight: 600;
-  background-color: todoBlue;
+  background-color: todoGray;
   border: 0;
 }

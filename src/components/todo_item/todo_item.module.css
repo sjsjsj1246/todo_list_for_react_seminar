@@ -1,4 +1,4 @@
-@value todoBlue, todoLightBlue, todoBlack from '../../common/colors.css';
+@value todoGray, todoLightGray, todoBlack from '../../common/colors.css';
 
 .todoItem {
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .todoItem:hover {
-  background-color: todoLightBlue;
+  background-color: todoLightGray;
 }
 
 .checked {
