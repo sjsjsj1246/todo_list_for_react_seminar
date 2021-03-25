@@ -1,6 +1,8 @@
 @value todoBlack, todoGray, todoWhite from '../../common/colors.css';
 
 .todoList {
+  position: absolute;
+  top: 10%;
   display: flex;
   flex-direction: column;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
@@ -8,37 +10,32 @@
 }
 
 .section {
-  background-color: todoWhite;
+  background-color: todoGray;
 }
 
 .container {
-  width: 40rem;
-  height: 40rem;
+  width: 30rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid todoBlack;
+  overflow-y: auto;
+}
+/* 
+@media screen and (max-width: 1680px) {
+  .todoList {
+    top: 12%;
+  }
 }
 
-.form {
-  margin: 1em;
-  display: flex;
-}
+@media screen and (max-width: 1400px) {
+  .todoList {
+    top: 14%;
+  }
+} */
 
-.input {
-  flex: 1;
-  margin-right: 0.5em;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid todoGray;
-}
-
-.submit {
-  width: 4rem;
-  height: 2.5rem;
-  color: todoWhite;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: todoGray;
-  border: 0;
+@media screen and (max-width: 1045px) {
+  .todoList {
+    top: 20%;
+  }
 }

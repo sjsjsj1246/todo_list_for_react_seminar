@@ -1,4 +1,11 @@
-@value todoGray, todoLightGray, todoBlack from '../../common/colors.css';
+@value todoWhite,todoGray, todoLightGray, todoBlack from '../../common/colors.css';
+
+.card {
+  background-color: todoWhite;
+  margin: 0.5em;
+  -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.3);
+}
 
 .todoItem {
   display: flex;
@@ -12,7 +19,7 @@
   background-color: todoLightGray;
 }
 
-.checked {
+.isCompleted {
   color: gray;
   text-decoration: line-through;
 }
@@ -29,7 +36,7 @@
   align-items: center;
 }
 
-.text {
+.description {
   flex: 1;
   margin: 0;
   width: 100%;
@@ -37,11 +44,31 @@
   text-align: left;
 }
 
-.todoItem:hover .Remove {
+.editForm {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: left;
+  border: 0;
+}
+
+.todoItem:hover .edit {
   opacity: 1;
 }
 
-.Remove {
+.edit {
+  opacity: 0;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.todoItem:hover .remove {
+  opacity: 1;
+}
+
+.remove {
   opacity: 0;
   font-size: 1.5rem;
 }

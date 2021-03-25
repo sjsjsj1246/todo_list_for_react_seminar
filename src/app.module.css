@@ -3,7 +3,7 @@
 }
 
 .app {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,19 +15,14 @@
   position: absolute;
   left: 10%;
   top: 10%;
+  -webkit-filter: drop-shadow(5px 5px 5px #000000);
+  filter: drop-shadow(5px 5px 5px #000000);
 }
 
 @media screen and (max-width: 1680px) {
   .clock {
     left: 8%;
     top: 12%;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .clock {
-    left: 6%;
-    top: 14%;
   }
 }
 

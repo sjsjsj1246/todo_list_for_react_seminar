@@ -1,0 +1,69 @@
+@value todoBlack, todoGray, todoLightGray, todoWhite from '../../common/colors.css';
+
+.form {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.addButton {
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addIcon {
+  transform: rotate(45deg);
+  transition: 0.125s all ease-in;
+  font-size: 2.5rem;
+  color: todoWhite;
+  cursor: pointer;
+}
+
+.addToggle {
+  transform: rotate(0deg);
+}
+
+.addForm {
+  margin-left: 1em;
+  flex: 1;
+  display: flex;
+}
+
+.input {
+  flex: 1;
+  padding: 0;
+  color: todoWhite;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: todoGray;
+}
+
+.input::placeholder {
+  color: todoLightGray;
+}
+
+.submit {
+  width: 4rem;
+  height: 2.5rem;
+  color: todoWhite;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10%;
+  background-color: todoBlack;
+  border: 0;
+}
+
+.closeForm {
+  margin-left: 1em;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  color: todoWhite;
+  cursor: pointer;
+}

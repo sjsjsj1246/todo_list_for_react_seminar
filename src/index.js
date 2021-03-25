@@ -3,18 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app';
 import axios from 'axios';
-import TodoList from './service/todo_list';
+import EndlessCreation from './service/endlesscreation';
 
-// const httpClient = axios.create({
-//   baseURL: 'http://',
-//   params: { key: process.env.TODO_LIST_API_KEY },
-// });
-//const todolist = new TodoList(httpClient);
+const httpClient = axios.create({
+  baseURL: 'https://api.dnatuna.fun',
+  params: {},
+});
+const endlesscreation = new EndlessCreation(httpClient);
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App todolist={todolist} /> */}
-    <App />
+    <App endlesscreation={endlesscreation} />
   </React.StrictMode>,
   document.getElementById('root'),
 );

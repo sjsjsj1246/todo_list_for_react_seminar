@@ -1,47 +1,47 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
-import Footer from '../footer/footer';
+import Form from '../form/form';
 import Header from '../header/header';
 import TodoItem from '../todo_item/todo_item';
 import styles from './todo_list.module.css';
 
-const TodoList = () => {
-  const textRef = useRef();
+const TodoList = ({ endlesscreation }) => {
   const history = useHistory();
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: '할 일',
-      checked: false,
-    },
-    {
-      id: 2,
-      text: '할 일2',
-      checked: true,
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
-  const handleCreate = () => {
+  useEffect(() => {
+    endlesscreation.getTodoList().then((todos) => setTodos(todos));
+  }, [endlesscreation]);
+
+  const refresh = () => {
+    endlesscreation.getTodoList().then((todos) => setTodos(todos));
+  };
+
+  const handleCreate = (description) => {
     const todo = {
-      id: Date.now(),
-      text: textRef.current.value,
-      checked: false,
+      title: 'title',
+      description: description,
+      writer: '황인서',
     };
-    setTodos(todos.concat(todo));
-
-    textRef.current.value = '';
+    endlesscreation.postTodoList(todo).then(() => refresh());
   };
 
   const handleRemove = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    endlesscreation.deleteTodo(id).then(() => refresh());
   };
 
-  const handleToggle = (id) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, checked: !todo.checked } : todo,
-      ),
-    );
+  const handleEdit = (id, description) => {
+    const todo = {
+      id: id,
+      title: 'title',
+      description: description,
+      writer: '황인서',
+    };
+    endlesscreation.patchTodo(todo).then(() => refresh());
+  };
+
+  const handleToggle = (id, isCompleted) => {
+    endlesscreation.patchTodoComplete(id, !isCompleted).then(() => refresh());
   };
 
   const goTodoHome = () => {
@@ -49,6 +49,7 @@ const TodoList = () => {
       pathname: '/',
     });
   };
+
   const onLogout = () => {
     goTodoHome();
   };
@@ -61,27 +62,17 @@ const TodoList = () => {
           {todos.map((todo) => (
             <TodoItem
               id={todo.id}
-              text={todo.text}
-              checked={todo.checked}
+              key={todo.id}
+              description={todo.description}
+              isCompleted={todo.isCompleted}
               onToggle={handleToggle}
               onRemove={handleRemove}
+              onEdit={handleEdit}
             />
           ))}
         </div>
-        <div className={styles.form}>
-          <input
-            ref={textRef}
-            className={styles.input}
-            type="text"
-            name="text"
-            placeholder="할 일을 입력하세요"
-          />
-          <button className={styles.submit} onClick={handleCreate}>
-            추가
-          </button>
-        </div>
+        <Form onCreate={handleCreate} />
       </section>
-      <Footer />
     </div>
   );
 };

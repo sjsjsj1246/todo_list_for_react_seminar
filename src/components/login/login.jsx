@@ -31,6 +31,11 @@ const Login = (props) => {
               Github
             </button>
           </li>
+          <li className={styles.item}>
+            <button className={styles.button} onClick={onLogin}>
+              게스트 로그인
+            </button>
+          </li>
         </ul>
       </section>
       <Footer />

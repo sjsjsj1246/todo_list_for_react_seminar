@@ -6,13 +6,12 @@ import TodoList from './components/todoList/todo_list';
 import Clock from 'react-clock-face';
 import useInterval from './service/useInterval';
 
-const App = (props) => {
+const App = ({ endlesscreation }) => {
   const [date, setDate] = useState(new Date());
 
   useInterval(() => {
     setDate(new Date());
-    console.log(date.getSeconds());
-  }, 1000);
+  }, 5000);
 
   return (
     <div className={styles.app}>
@@ -29,7 +28,7 @@ const App = (props) => {
             <Login />
           </Route>
           <Route path="/todo_list">
-            <TodoList />
+            <TodoList endlesscreation={endlesscreation} />
           </Route>
         </Switch>
       </BrowserRouter>
