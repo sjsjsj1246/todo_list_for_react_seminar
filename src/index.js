@@ -2,14 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app';
-import axios from 'axios';
 import EndlessCreation from './service/endlesscreation';
 
-const httpClient = axios.create({
-  baseURL: 'https://api.dnatuna.fun',
-  params: {},
-});
-const endlesscreation = new EndlessCreation(httpClient);
+const endlesscreation = new EndlessCreation();
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './app.module.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/login/login';
@@ -8,10 +8,9 @@ import useInterval from './service/useInterval';
 
 const App = ({ endlesscreation }) => {
   const [date, setDate] = useState(new Date());
-
   useInterval(() => {
     setDate(new Date());
-  }, 5000);
+  }, 10000);
 
   return (
     <div className={styles.app}>
@@ -25,7 +24,7 @@ const App = ({ endlesscreation }) => {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/">
-            <Login />
+            <Login endlesscreation={endlesscreation} />
           </Route>
           <Route path="/todo_list">
             <TodoList endlesscreation={endlesscreation} />

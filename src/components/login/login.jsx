@@ -4,15 +4,15 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import styles from './login.module.css';
 
-const Login = (props) => {
+const Login = ({ endlesscreation }) => {
   const history = useHistory();
   const goTodoList = () => {
     history.push({
       pathname: '/todo_list',
     });
   };
-  const onLogin = () => {
-    goTodoList();
+  const onLogin = (providerName) => {
+    endlesscreation.login(providerName).then(goTodoList);
   };
 
   return (
@@ -22,17 +22,17 @@ const Login = (props) => {
         <h1>login</h1>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <button className={styles.button} onClick={onLogin}>
-              Google
+            <button className={styles.button} onClick={() => onLogin('google')}>
+              Google 로그인
             </button>
           </li>
           <li className={styles.item}>
-            <button className={styles.button} onClick={onLogin}>
-              Github
+            <button className={styles.button} onClick={() => onLogin('github')}>
+              Github 로그인
             </button>
           </li>
           <li className={styles.item}>
-            <button className={styles.button} onClick={onLogin}>
+            <button className={styles.button} onClick={() => onLogin('guest')}>
               게스트 로그인
             </button>
           </li>

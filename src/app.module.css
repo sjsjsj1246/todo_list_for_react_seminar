@@ -19,13 +19,6 @@
   filter: drop-shadow(5px 5px 5px #000000);
 }
 
-@media screen and (max-width: 1680px) {
-  .clock {
-    left: 8%;
-    top: 12%;
-  }
-}
-
 @media screen and (max-width: 1045px) {
   .app {
     padding-top: 10rem;

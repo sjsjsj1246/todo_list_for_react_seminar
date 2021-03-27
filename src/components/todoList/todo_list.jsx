@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
+import useInterval from '../../service/useInterval';
 import Form from '../form/form';
 import Header from '../header/header';
 import TodoItem from '../todo_item/todo_item';
 import styles from './todo_list.module.css';
 
 const TodoList = ({ endlesscreation }) => {
-  const history = useHistory();
   const [todos, setTodos] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     endlesscreation.getTodoList().then((todos) => setTodos(todos));
@@ -44,15 +45,15 @@ const TodoList = ({ endlesscreation }) => {
     endlesscreation.patchTodoComplete(id, !isCompleted).then(() => refresh());
   };
 
-  const goTodoHome = () => {
+  const onLogout = () => {
     history.push({
       pathname: '/',
     });
   };
 
-  const onLogout = () => {
-    goTodoHome();
-  };
+  // useInterval(() => {
+  //   refresh();
+  // }, 10000);
 
   return (
     <div className={styles.todoList}>

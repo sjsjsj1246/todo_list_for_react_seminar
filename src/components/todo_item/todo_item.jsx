@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './todo_item.module.css';
 import { MdModeEdit, MdDone, MdDelete } from 'react-icons/md';
 
@@ -11,9 +11,10 @@ const TodoItem = ({
   onEdit,
 }) => {
   const [editToggle, setEditToggle] = useState(false);
-  const descriptionRef = useRef();
+  const [inputValue, setInputValue] = useState(description);
+
   const handleEdit = () => {
-    onEdit(id, descriptionRef.current.value);
+    onEdit(id, inputValue);
     setEditToggle(false);
   };
 
@@ -38,9 +39,9 @@ const TodoItem = ({
           <div className={styles.editForm}>
             <input
               className={styles.editForm}
-              placeholder={description}
-              ref={descriptionRef}
+              value={inputValue}
               onKeyPress={handleKeyPress}
+              onChange={(e) => setInputValue(e.target.value)}
               autoFocus
             ></input>
           </div>

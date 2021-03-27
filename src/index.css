@@ -15,10 +15,8 @@ code {
     monospace;
 }
 
-@media screen and (max-width: 1680px) {
-  html {
-    font-size: 13px;
-  }
+html {
+  font-size: 13px;
 }
 
 @media screen and (max-width: 1045px) {
