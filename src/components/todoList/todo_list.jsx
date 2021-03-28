@@ -46,6 +46,7 @@ const TodoList = ({ endlesscreation }) => {
   };
 
   const onLogout = () => {
+    endlesscreation.setAccessToken('');
     history.push({
       pathname: '/',
     });

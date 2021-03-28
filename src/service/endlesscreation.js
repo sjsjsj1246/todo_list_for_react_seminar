@@ -15,8 +15,49 @@ class EndlessCreation {
       method: 'get',
       url: `${this.baseURL}/oauth/${providerName}`,
     });
-    console.log(response);
     this.setAccessToken(response.data.accessToken);
+    return response.data;
+  }
+
+  async getGithubToken(code) {
+    const response = await axios({
+      method: 'post',
+      url:
+        'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
+      data: {
+        client_id: `${process.env.REACT_APP_GITHUB_CLIENT_ID}`,
+        client_secret: `${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`,
+        code: code,
+        redirect_uri: `${process.env.REACT_APP_BASE_URL}`,
+      },
+    });
+    return response.data;
+  }
+
+  async postGithubToken(token) {
+    const response = await axios({
+      method: 'post',
+      url: `${this.baseURL}/oauth/github`,
+      data: {
+        access_token: token,
+      },
+    });
+    return response.data;
+  }
+
+  async postGoogleToken(token) {
+    const response = await axios({
+      method: 'post',
+      url: `${this.baseURL}/oauth/google`,
+      data: {
+        token_type: token.token_type || 'bearer',
+        access_token: token.access_token,
+        scope: token.scope || '',
+        expires_in: token.expires_in || '',
+        id_token: token.id_token || '',
+        expires_at: token.expires_at || '',
+      },
+    });
     return response.data;
   }
 
