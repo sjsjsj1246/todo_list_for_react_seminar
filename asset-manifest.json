@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/todo_list_for_react_seminar/static/css/main.fa4ab523.chunk.css",
-    "main.js": "/todo_list_for_react_seminar/static/js/main.0c9323b3.chunk.js",
-    "main.js.map": "/todo_list_for_react_seminar/static/js/main.0c9323b3.chunk.js.map",
+    "main.js": "/todo_list_for_react_seminar/static/js/main.e6c51f69.chunk.js",
+    "main.js.map": "/todo_list_for_react_seminar/static/js/main.e6c51f69.chunk.js.map",
     "runtime-main.js": "/todo_list_for_react_seminar/static/js/runtime-main.276de826.js",
     "runtime-main.js.map": "/todo_list_for_react_seminar/static/js/runtime-main.276de826.js.map",
-    "static/js/2.65d166af.chunk.js": "/todo_list_for_react_seminar/static/js/2.65d166af.chunk.js",
-    "static/js/2.65d166af.chunk.js.map": "/todo_list_for_react_seminar/static/js/2.65d166af.chunk.js.map",
+    "static/js/2.1284ad25.chunk.js": "/todo_list_for_react_seminar/static/js/2.1284ad25.chunk.js",
+    "static/js/2.1284ad25.chunk.js.map": "/todo_list_for_react_seminar/static/js/2.1284ad25.chunk.js.map",
     "index.html": "/todo_list_for_react_seminar/index.html",
     "static/css/main.fa4ab523.chunk.css.map": "/todo_list_for_react_seminar/static/css/main.fa4ab523.chunk.css.map",
-    "static/js/2.65d166af.chunk.js.LICENSE.txt": "/todo_list_for_react_seminar/static/js/2.65d166af.chunk.js.LICENSE.txt"
+    "static/js/2.1284ad25.chunk.js.LICENSE.txt": "/todo_list_for_react_seminar/static/js/2.1284ad25.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.276de826.js",
-    "static/js/2.65d166af.chunk.js",
+    "static/js/2.1284ad25.chunk.js",
     "static/css/main.fa4ab523.chunk.css",
-    "static/js/main.0c9323b3.chunk.js"
+    "static/js/main.e6c51f69.chunk.js"
   ]
 }
