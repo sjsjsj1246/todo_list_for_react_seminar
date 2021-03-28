@@ -28,7 +28,8 @@ class EndlessCreation {
         client_id: `${process.env.REACT_APP_GITHUB_CLIENT_ID}`,
         client_secret: `${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`,
         code: code,
-        redirect_uri: `${process.env.REACT_APP_BASE_URL}`,
+        redirect_uri:
+          'https://sjsjsj1246.github.io/todo_list_for_react_seminar/',
       },
     });
     return response.data;

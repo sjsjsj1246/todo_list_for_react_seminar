@@ -38,7 +38,6 @@ const Login = ({ endlesscreation }) => {
               }}
               onFailure={(result) => console.log(result)}
               cookiePolicy={'single_host_origin'}
-              redirectUri={process.env.REACT_APP_BASE_URL}
             />
           </li>
           <li className={styles.item}>
@@ -60,7 +59,7 @@ const Login = ({ endlesscreation }) => {
               }}
               onFailure={(result) => console.log(result)}
               cookiePolicy={'single_host_origin'}
-              redirectUri={process.env.REACT_APP_BASE_URL}
+              redirectUri="https://sjsjsj1246.github.io/todo_list_for_react_seminar/"
             />
           </li>
           <li className={styles.item}>
