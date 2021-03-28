@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/todo_list_for_react_seminar/static/css/main.fa4ab523.chunk.css",
-    "main.js": "/todo_list_for_react_seminar/static/js/main.db5f6498.chunk.js",
-    "main.js.map": "/todo_list_for_react_seminar/static/js/main.db5f6498.chunk.js.map",
+    "main.js": "/todo_list_for_react_seminar/static/js/main.1b457023.chunk.js",
+    "main.js.map": "/todo_list_for_react_seminar/static/js/main.1b457023.chunk.js.map",
     "runtime-main.js": "/todo_list_for_react_seminar/static/js/runtime-main.276de826.js",
     "runtime-main.js.map": "/todo_list_for_react_seminar/static/js/runtime-main.276de826.js.map",
     "static/js/2.865699b5.chunk.js": "/todo_list_for_react_seminar/static/js/2.865699b5.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.276de826.js",
     "static/js/2.865699b5.chunk.js",
     "static/css/main.fa4ab523.chunk.css",
-    "static/js/main.db5f6498.chunk.js"
+    "static/js/main.1b457023.chunk.js"
   ]
 }
